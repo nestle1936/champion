@@ -21,7 +21,7 @@ provider "aws" {
   shared_credentials_file = "~/.aws/credentials"
 #   access_key = "my-access-key"
 #   secret_key = "my-secret-key"
-profile = default
+profile = "default"
 }
 
 
