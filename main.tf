@@ -14,11 +14,14 @@ terraform {
   }
 }
 
-provider "aws" {
+
   # Configuration options
-  access_key = var.access_key
-  secret_key = var.secret_key
+provider "aws" {
+  region     = "us-east-1"
+  access_key = "my-access-key"
+  secret_key = "my-secret-key"
 }
+
 
 resource "aws_vpc" "my_vpc" {
   cidr_block = "172.16.0.0/16"
