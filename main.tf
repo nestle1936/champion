@@ -18,8 +18,9 @@ terraform {
   # Configuration options
 provider "aws" {
   region     = "us-east-1"
-  access_key = "my-access-key"
-  secret_key = "my-secret-key"
+#   shared_credentials_file = var.creds
+#   access_key = "my-access-key"
+#   secret_key = "my-secret-key"
 }
 
 
@@ -62,7 +63,7 @@ resource "aws_instance" "foo" {
   credit_specification {
     cpu_credits = "unlimited"
   }
-  key_name = var.keypair
+  
   tags = {
     "Name" = "champion"
   }
