@@ -57,8 +57,11 @@ resource "aws_instance" "foo" {
   credit_specification {
     cpu_credits = "unlimited"
   }
-  key_name = "Jenkinskey"
+  key_name = var.keypair
   tags = {
     "Name" = "champion"
   }
+}
+variable "keypair" {
+  default = "Jenkinskey"
 }
