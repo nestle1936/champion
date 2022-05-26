@@ -2,7 +2,7 @@ terraform {
   cloud {
     organization = "champion-group"
     workspaces {
-      name = "champion"
+      name = "champion2"
     }
   }
 
@@ -18,9 +18,8 @@ terraform {
   # Configuration options
 provider "aws" {
   region     = "us-east-1"
-  access_key = "var.access_key"
-  secret_key = "var.secret_key"
-
+  access_key = var.access_key
+  secret_key = var.secret_key
 }
 
 
