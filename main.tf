@@ -2,10 +2,10 @@ terraform {
   cloud {
     organization = "champion-group"
     workspaces {
-      tags = ["champion2"]
+      name = "champion2"
     }
   }
-  
+
   required_providers {
     aws = {
       source = "hashicorp/aws"
@@ -57,7 +57,7 @@ resource "aws_instance" "foo" {
   credit_specification {
     cpu_credits = "unlimited"
   }
-
+  key_name = "projet-1key"
   tags = {
     "Name" = "champion"
   }
