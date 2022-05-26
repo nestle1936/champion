@@ -1,4 +1,11 @@
 terraform {
+  cloud {
+    organization = "champion-group"
+    workspaces {
+      tags = ["champion2"]
+    }
+  }
+  
   required_providers {
     aws = {
       source = "hashicorp/aws"
