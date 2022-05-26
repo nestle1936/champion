@@ -2,7 +2,7 @@ terraform {
   cloud {
     organization = "champion-group"
     workspaces {
-      name = "champion2"
+      name = "champion"
     }
   }
 
