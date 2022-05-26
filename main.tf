@@ -18,9 +18,10 @@ terraform {
   # Configuration options
 provider "aws" {
   region     = "us-east-1"
-#   shared_credentials_file = var.creds
+  shared_credentials_file = "~/.aws/credentials"
 #   access_key = "my-access-key"
 #   secret_key = "my-secret-key"
+profile = default
 }
 
 
