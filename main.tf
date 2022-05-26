@@ -43,7 +43,7 @@ resource "aws_network_interface" "foo" {
   private_ips = ["172.16.10.100"]
 
   tags = {
-    Name = "primary_network"
+    Name = "primary_network_interface"
   }
 }
 
