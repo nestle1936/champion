@@ -16,6 +16,8 @@ terraform {
 
 provider "aws" {
   # Configuration options
+  access_key = var.access_key
+  secret_key = var.secret_key
 }
 
 resource "aws_vpc" "my_vpc" {
@@ -61,7 +63,4 @@ resource "aws_instance" "foo" {
   tags = {
     "Name" = "champion"
   }
-}
-variable "keypair" {
-  default = "Jenkinskey"
 }
